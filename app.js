@@ -2,11 +2,11 @@ var express = require('express');
 var app = express();
 var fetch = require('node-fetch');
 
-app.listen(3000, function() {
+app.listen(3001, function() {
     console.log("[NodeJS] Application Listening on Port 3000");
 });
 
-app.get('/api/play/:key', function(req, res) {
+app.get('/', function(req, res) {
     var key = req.params.key;
 
     var url = 'https://andriixyz.s3.eu-west-1.amazonaws.com/abc3.mp3';
