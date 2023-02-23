@@ -1,10 +1,13 @@
-var express = require('express');
-var app = express();
+const express = require("express");
 var fetch = require('node-fetch');
 
-app.listen(3001, function() {
-    console.log("[NodeJS] Application Listening on Port 3000");
-});
+const app = express();
+
+var fetch = require('node-fetch');
+
+const port = process.env.PORT || 3001;
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 app.get('/', function(req, res) {
     var key = req.params.key;
